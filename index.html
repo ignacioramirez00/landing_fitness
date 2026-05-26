@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html class="dark" lang="es" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>FACUNDO SACIDO | RENDIMIENTO ÉLITE</title>
+    <!-- Tailwind CSS with Forms and Container Queries Plugins -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "outline-variant": "#444748",
+                "surface-container-highest": "#353534",
+                "surface": "#131313",
+                "tertiary-container": "#e3e2e7",
+                "on-secondary-container": "#b5b5b5",
+                "on-tertiary-fixed": "#1a1b1f",
+                "error": "#ffb4ab",
+                "on-error-container": "#ffdad6",
+                "surface-dim": "#131313",
+                "surface-container-high": "#2a2a2a",
+                "secondary": "#c6c6c6",
+                "on-tertiary-fixed-variant": "#46464b",
+                "on-error": "#690005",
+                "error-container": "#93000a",
+                "surface-container": "#201f1f",
+                "tertiary-fixed-dim": "#c7c6cb",
+                "surface-variant": "#353534",
+                "on-background": "#e5e2e1",
+                "surface-container-lowest": "#0e0e0e",
+                "primary": "#ffffff",
+                "outline": "#8e9192",
+                "secondary-fixed-dim": "#c6c6c6",
+                "tertiary": "#ffffff",
+                "surface-bright": "#393939",
+                "primary-container": "#e2e2e2",
+                "on-tertiary-container": "#646469",
+                "primary-fixed-dim": "#c6c6c7",
+                "on-secondary-fixed": "#1b1b1b",
+                "secondary-fixed": "#e2e2e2",
+                "inverse-surface": "#e5e2e1",
+                "inverse-on-surface": "#313030",
+                "primary-fixed": "#e2e2e2",
+                "on-surface-variant": "#c4c7c8",
+                "tertiary-fixed": "#e3e2e7",
+                "on-secondary": "#303030",
+                "on-primary-fixed": "#1a1c1c",
+                "background": "#131313",
+                "surface-container-low": "#1c1b1b",
+                "on-primary-container": "#636565",
+                "secondary-container": "#474747",
+                "on-primary": "#2f3131",
+                "on-surface": "#e5e2e1",
+                "on-primary-fixed-variant": "#454747",
+                "inverse-primary": "#5d5f5f",
+                "on-secondary-fixed-variant": "#474747",
+                "surface-tint": "#c6c6c7",
+                "on-tertiary": "#2f3034"
+            },
+            "borderRadius": {
+                "DEFAULT": "0px",
+                "lg": "0px",
+                "xl": "0px",
+                "full": "9999px"
+            },
+            "spacing": {
+                "margin-mobile": "24px",
+                "section-gap": "120px",
+                "gutter": "24px",
+                "margin-desktop": "64px",
+                "unit": "8px",
+                "container-max": "1280px"
+            },
+            "fontFamily": {
+                "label-caps": ["JetBrains Mono"],
+                "headline-lg": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "headline-md": ["Hanken Grotesk"],
+                "body-lg": ["Inter"],
+                "headline-lg-mobile": ["Hanken Grotesk"],
+                "display-xl": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "headline-md": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "headline-lg-mobile": ["32px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "display-xl": ["80px", {"lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            overflow-x: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+        .text-outline {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+            color: transparent;
+        }
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        ::selection {
+            background: #ffffff;
+            color: #000000;
+        }
+        
+        /* Glassmorphic elements */
+        .glass-panel {
+            background: rgba(20, 20, 20, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        .glass-toast {
+            background: rgba(15, 15, 15, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Scroll reveal transition classes */
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            will-change: opacity, transform;
+        }
+        .reveal-element.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="font-body-md bg-background text-on-background selection:bg-primary selection:text-background">
+
+<!-- TopAppBar -->
+<header class="flex justify-between items-center px-6 md:px-margin-desktop h-16 w-full fixed top-0 z-50 bg-background/90 backdrop-blur-md border-b border-outline-variant">
+    <div class="flex items-center gap-4">
+        <span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-80 transition-opacity" id="menu-btn" onclick="toggleDrawer()">menu</span>
+        <div class="font-headline-md text-headline-md tracking-tighter text-primary font-bold uppercase select-none">
+            <a href="#">FACUNDO SACIDO</a>
+        </div>
+    </div>
+    <nav class="hidden md:flex gap-8 items-center">
+        <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#programas">PLANES DE ENTRENAMIENTO</a>
+        <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#coaching">COACHING ONLINE</a>
+        <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#progreso">PROGRESO</a>
+        <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#testimonios">TESTIMONIOS</a>
+        <a class="font-label-caps text-label-caps text-primary border border-primary px-4 py-2 hover:bg-primary hover:text-background transition-colors" href="#contacto">ÚNETE AHORA</a>
+    </nav>
+</header>
+
+<!-- Navigation Drawer Backdrop Overlay -->
+<div id="drawer-overlay" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[55] opacity-0 pointer-events-none transition-opacity duration-300" onclick="toggleDrawer()"></div>
+
+<!-- Navigation Drawer (SideNav) -->
+<aside class="fixed inset-y-0 left-0 z-[60] flex flex-col p-8 bg-surface border-r border-outline-variant h-full w-80 -translate-x-full transition-transform duration-300 ease-in-out" id="drawer">
+    <div class="flex justify-between items-center mb-12">
+        <div class="font-headline-lg text-headline-lg text-primary">
+            <span class="font-bold tracking-tighter font-headline-md">FS ÉLITE</span>
+        </div>
+        <span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-80 transition-opacity" onclick="toggleDrawer()">close</span>
+    </div>
+    <div class="flex flex-col gap-6">
+        <a class="text-on-surface-variant pl-4 py-2 font-label-caps text-label-caps hover:text-primary hover:border-l-2 hover:border-primary transition-all" href="#programas" onclick="toggleDrawer()">PLANES DE ENTRENAMIENTO</a>
+        <a class="text-on-surface-variant pl-4 py-2 font-label-caps text-label-caps hover:text-primary hover:border-l-2 hover:border-primary transition-all" href="#coaching" onclick="toggleDrawer()">COACHING ONLINE</a>
+        <a class="text-on-surface-variant pl-4 py-2 font-label-caps text-label-caps hover:text-primary hover:border-l-2 hover:border-primary transition-all" href="#progreso" onclick="toggleDrawer()">PROGRESO</a>
+        <a class="text-on-surface-variant pl-4 py-2 font-label-caps text-label-caps hover:text-primary hover:border-l-2 hover:border-primary transition-all" href="#testimonios" onclick="toggleDrawer()">TESTIMONIOS</a>
+        <a class="text-on-surface-variant pl-4 py-2 font-label-caps text-label-caps hover:text-primary hover:border-l-2 hover:border-primary transition-all" href="#contacto" onclick="toggleDrawer()">CONTACTO</a>
+    </div>
+    <div class="mt-auto pt-8 border-t border-outline-variant text-[10px] font-label-caps text-on-surface-variant">
+        EST. 2024 / MÉTODOS CIENTÍFICOS
+    </div>
+</aside>
+
+<!-- Floating Toast Container -->
+<div id="toast-container" class="fixed top-20 right-6 z-[100] flex flex-col gap-4 max-w-sm w-full pointer-events-none"></div>
+
+<main class="pt-16">
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden px-6 md:px-margin-desktop">
+        <div class="absolute inset-0 z-0 opacity-30">
+            <img alt="Visual de marca Facundo Sacido" class="w-full h-full object-cover grayscale brightness-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvcC8K81pFONs9qwxoqEaw3ZZCuKT_b5MAq4WaHKNKa5vqFWOkhPcKsqoTK29BbRBnhyhUihy6ueeuQwQ8FzpaKnIx1ck8vCfENji0CJvzzBtr57QZkOuNw7xMLSAMB3HOJpGB0ROvl0v6yaRUTsorG3VHdNy9VE2Qmq16lCketO2oeuDnKpTqR9aW1K2eQ3q87PVo120KRZjorgqDk2z240IqAXcyk5iO1cqQuswXC7HsNCzn9sKSA2XFJk_M5LM_BJOwIw2E0tI">
+        </div>
+        <div class="relative z-10 w-full max-w-container-max flex flex-col items-start gap-8 py-16">
+            <span class="font-label-caps text-label-caps text-primary tracking-[0.4em] mb-4 block select-none">EST. 2024 / ENTRENAMIENTO ÉLITE</span>
+            <h1 class="font-display-xl text-4xl sm:text-6xl md:text-8xl md:leading-[1.0] font-black uppercase text-white tracking-tighter">
+                RENDIMIENTO ÉLITE.<br>
+                <span class="text-outline">SIN EXCUSAS.</span>
+            </h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                Forjando físicos arquitectónicos a través de metodología basada en datos y una disciplina inquebrantable. Esto no es un entrenamiento; es una evolución estructural.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 mt-8 w-full sm:w-auto">
+                <a href="#contacto" class="bg-primary text-background font-label-caps text-label-caps text-center px-10 py-5 hover:bg-neutral-200 transition-all select-none active:scale-95 duration-150">
+                    COMIENZA TU EVOLUCIÓN
+                </a>
+                <a href="#programas" class="border border-primary text-primary font-label-caps text-label-caps text-center px-10 py-5 hover:bg-primary/10 transition-all select-none active:scale-95 duration-150">
+                    VER PROTOCOLOS
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-12 right-6 md:right-margin-desktop hidden sm:flex items-center gap-4 vertical-text select-none">
+            <span class="font-label-caps text-label-caps text-on-surface-variant">DESLIZA PARA ASCENDER</span>
+            <div class="w-px h-24 bg-outline-variant"></div>
+        </div>
+    </section>
+
+    <!-- Training Plans Section -->
+    <section id="programas" class="py-section-gap px-6 md:px-margin-desktop bg-background border-t border-outline-variant reveal-element">
+        <div class="max-w-container-max mx-auto">
+            <div class="flex justify-between items-end mb-16">
+                <div class="flex flex-col gap-4">
+                    <span class="font-label-caps text-label-caps text-primary">ELIGE TU CAMINO</span>
+                    <h2 class="font-headline-lg text-3xl sm:text-5xl uppercase font-bold tracking-tight">Programas Especializados</h2>
+                </div>
+                <div class="font-label-caps text-label-caps text-on-surface-variant mb-2">01 / 03</div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Program Card 1 -->
+                <div class="group relative overflow-hidden bg-surface-container-low border border-outline-variant aspect-[4/5] p-6 sm:p-10 flex flex-col justify-between transition-all hover:border-primary duration-500">
+                    <div class="absolute inset-0 z-0 opacity-15 group-hover:opacity-30 transition-opacity duration-700 pointer-events-none">
+                        <img class="w-full h-full object-cover grayscale" alt="Barra cargada con discos en gimnasio industrial" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_AuyUt7_o4dVuNEAKpgOWFUV8Pod3vtCY1a8kabk2MDMKIIje_FVZM-b2DUcnoqdajiko0oleZE-k_pqQLlFsXLPH-eHiFu7otMPVn7PQSkYwgIcM1ZctRe05KcRt3ZMkhEmEEh7hZ4cxduCm8YV81IUc4ETbCoZCcsGmJyMERw-ctfilYL8maWwkKvsjbWitWUHupsA8AOYYqR7qq82FFSH255acCpjbTJcOfVuUa9t7bl68LdtI2SpuK3HviOKNfY5zwlW5PXM">
+                    </div>
+                    <div class="relative z-10">
+                        <div class="flex gap-2 mb-6">
+                            <span class="bg-black border border-outline-variant text-on-surface-variant px-3 py-1 font-label-caps text-[10px]">FUERZA</span>
+                            <span class="bg-black border border-outline-variant text-on-surface-variant px-3 py-1 font-label-caps text-[10px]">12 SEMANAS</span>
+                        </div>
+                        <h3 class="font-headline-lg text-3xl sm:text-4xl uppercase font-bold leading-none mb-6">RENDIMIENTO<br>ÉLITE</h3>
+                        <p class="font-body-md text-on-surface-variant max-w-sm">
+                            Condicionamiento atlético avanzado para quienes están listos para romper estancamientos. Ciclos de carga mapeados con precisión y optimización metabólica.
+                        </p>
+                    </div>
+                    <div class="relative z-10 flex items-center justify-between border-t border-outline-variant pt-6 group-hover:border-primary transition-colors">
+                        <span class="font-label-caps text-label-caps">$149.00 USD</span>
+                        <a href="#contacto" class="flex items-center gap-2 font-label-caps text-[11px] text-primary hover:opacity-85">
+                            ADQUIRIR <span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform duration-300">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Program Card 2 -->
+                <div class="group relative overflow-hidden bg-surface-container-low border border-outline-variant aspect-[4/5] p-6 sm:p-10 flex flex-col justify-between transition-all hover:border-primary duration-500">
+                    <div class="absolute inset-0 z-0 opacity-15 group-hover:opacity-30 transition-opacity duration-700 pointer-events-none">
+                        <img class="w-full h-full object-cover grayscale" alt="Atleta realizando un peso muerto pesado con alta definición" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBf5JPIMwHCFYyYZ-TomPszpKk2Iw6ABaGpZwINs_yITBHnvKQuzX_KoaqvgGBmGdlN420qH4ythaI3F3_yFKfEt6CjCNHGX5jXOZCxAtjMyZRet-U_pZEnrnmmq1GzdYDNkY3RqfgI0BII5ZeknDTg_Hrh3ZIk8qFRDt4QadrW2fu5XNfUg2mC_3vm6fI0-8mjPIpaujcnpY87_Re9Ubxcf6r1pdYrPI6izbv3QZXFoLFhlgRt5huDSN5g2Xwra1dSzhdjR3uOMrA">
+                    </div>
+                    <div class="relative z-10">
+                        <div class="flex gap-2 mb-6">
+                            <span class="bg-black border border-outline-variant text-on-surface-variant px-3 py-1 font-label-caps text-[10px]">HIPERTROFIA</span>
+                            <span class="bg-black border border-outline-variant text-on-surface-variant px-3 py-1 font-label-caps text-[10px]">16 SEMANAS</span>
+                        </div>
+                        <h3 class="font-headline-lg text-3xl sm:text-4xl uppercase font-bold leading-none mb-6">FUERZA<br>ESTRUCTURAL</h3>
+                        <p class="font-body-md text-on-surface-variant max-w-sm">
+                            Reconstruye tu físico desde los cimientos. Enfocado en la tensión mecánica, sobrecarga progresiva y simetría estética.
+                        </p>
+                    </div>
+                    <div class="relative z-10 flex items-center justify-between border-t border-outline-variant pt-6 group-hover:border-primary transition-colors">
+                        <span class="font-label-caps text-label-caps">$199.00 USD</span>
+                        <a href="#contacto" class="flex items-center gap-2 font-label-caps text-[11px] text-primary hover:opacity-85">
+                            ADQUIRIR <span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform duration-300">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1-on-1 Coaching Section -->
+    <section id="coaching" class="min-h-screen grid grid-cols-1 md:grid-cols-2 border-t border-outline-variant reveal-element">
+        <div class="relative order-2 md:order-1 h-[60vh] md:h-auto overflow-hidden">
+            <img class="w-full h-full object-cover grayscale" alt="Entrenador observando técnica de levantamiento" src="https://lh3.googleusercontent.com/aida/ADBb0ujipZD-zTMKqbpOJLEU4KBPtQrmSEHhKzPorPzTd7qhIlyfrTvO1Npa9gMzCVMvehEo-3T97873J-SjnSLzyUGepYbeEaIvUA0zJJubcp4c8E_U3Om6HTGVdCzwoNycaadQ0M2ONKnk1NAaY9HlIOwKjBR8oxRRfi7ZgC4LPC44hy5C_Legfvx6pxIr9S3B_ROFaqP4fICM3zTyMxv-2ZgPqeeopCLUwaxljbwJE8mgHk0QRZml6ZocTOmjfhIIO2I0z22fwpF2yw">
+            <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+        </div>
+        <div class="flex flex-col justify-center p-8 sm:p-16 lg:p-24 order-1 md:order-2 bg-surface">
+            <span class="font-label-caps text-label-caps text-primary mb-6 block">PROTOCOLOS PREMIUM</span>
+            <h2 class="font-headline-lg text-3xl sm:text-5xl mb-12 uppercase leading-tight font-bold tracking-tight">Coaching Élite<br>1-a-1</h2>
+            <ul class="flex flex-col gap-10">
+                <li class="flex gap-6 group">
+                    <div class="w-12 h-12 border border-outline-variant flex items-center justify-center shrink-0 group-hover:border-primary transition-colors">
+                        <span class="material-symbols-outlined text-primary">monitoring</span>
+                    </div>
+                    <div>
+                        <h4 class="font-headline-md text-xl font-bold mb-2 uppercase">Auditorías Semanales</h4>
+                        <p class="font-body-md text-on-surface-variant">Desglose de técnica fotograma a fotograma y análisis de datos metabólicos cada 7 días.</p>
+                    </div>
+                </li>
+                <li class="flex gap-6 group">
+                    <div class="w-12 h-12 border border-outline-variant flex items-center justify-center shrink-0 group-hover:border-primary transition-colors">
+                        <span class="material-symbols-outlined text-primary">chat</span>
+                    </div>
+                    <div>
+                        <h4 class="font-headline-md text-xl font-bold mb-2 uppercase">Comunicación Directa</h4>
+                        <p class="font-body-md text-on-surface-variant">Acceso directo 24/7 a Facundo Sacido para ajustes en tiempo real y sintonía mental.</p>
+                    </div>
+                </li>
+                <li class="flex gap-6 group">
+                    <div class="w-12 h-12 border border-outline-variant flex items-center justify-center shrink-0 group-hover:border-primary transition-colors">
+                        <span class="material-symbols-outlined text-primary">nutrition</span>
+                    </div>
+                    <div>
+                        <h4 class="font-headline-md text-xl font-bold mb-2 uppercase">Arquitectura Nutricional</h4>
+                        <p class="font-body-md text-on-surface-variant">Perfilado de macronutrientes basado en tu intensidad de entrenamiento y tasa de recuperación específica.</p>
+                    </div>
+                </li>
+            </ul>
+            <a href="#contacto" class="mt-16 bg-primary text-background font-label-caps text-label-caps text-center px-12 py-5 self-start hover:bg-neutral-200 transition-all select-none active:scale-95 duration-150">
+                SOLICITAR COACHING
+            </a>
+        </div>
+    </section>
+
+    <!-- Measurable Evolution Section (Data Visualization Dashboard) -->
+    <section id="progreso" class="py-section-gap px-6 md:px-margin-desktop bg-surface-container-lowest border-t border-outline-variant reveal-element">
+        <div class="max-w-container-max mx-auto">
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-8">
+                <div class="flex flex-col gap-4">
+                    <span class="font-label-caps text-label-caps text-primary tracking-widest block">CIENCIA &amp; DATOS</span>
+                    <h2 class="font-headline-lg text-3xl sm:text-5xl uppercase font-bold tracking-tight">Evolución Medible</h2>
+                    <p class="font-body-md text-on-surface-variant max-w-2xl">
+                        Monitoreo clínico del rendimiento físico. Selecciona un caso de estudio real para explorar la sobrecarga progresiva y los marcadores fisiológicos bajo supervisión directa.
+                    </p>
+                </div>
+                <!-- Atleta Selectors -->
+                <div class="flex border border-outline-variant bg-black p-1 self-start lg:self-auto shrink-0 font-label-caps text-[11px] tracking-wider">
+                    <button onclick="switchAthlete('marcus')" id="btn-athlete-marcus" class="px-5 py-2.5 bg-primary text-background font-bold transition-all">
+                        MARCUS C. (HIPERTROFIA)
+                    </button>
+                    <button onclick="switchAthlete('sarah')" id="btn-athlete-sarah" class="px-5 py-2.5 text-on-surface-variant hover:text-primary transition-all">
+                        SARAH J. (FUERZA ÉLITE)
+                    </button>
+                </div>
+            </div>
+
+            <!-- Dashboard Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <!-- Left Panel: Stats and Controls -->
+                <div class="lg:col-span-4 bg-surface border border-outline-variant p-6 sm:p-8 flex flex-col justify-between gap-12">
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="relative flex h-3 w-3">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-neutral-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+                            </span>
+                            <span class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest">ANÁLISIS DE DATOS ACTIVO</span>
+                        </div>
+                        <h3 class="font-headline-md text-2xl uppercase mb-8 text-primary font-bold" id="athlete-title">MARCUS C. / 12 SEMANAS</h3>
+                        
+                        <!-- Metrics Grid -->
+                        <div class="flex flex-col gap-6">
+                            <div class="flex justify-between items-center border-b border-outline-variant pb-4">
+                                <span class="font-label-caps text-label-caps text-on-surface-variant">Masa Muscular</span>
+                                <span class="font-headline-md text-xl text-primary font-bold" id="metric-muscle">+4.2 kg</span>
+                            </div>
+                            <div class="flex justify-between items-center border-b border-outline-variant pb-4">
+                                <span class="font-label-caps text-label-caps text-on-surface-variant">Grasa Corporal</span>
+                                <span class="font-headline-md text-xl text-primary font-bold" id="metric-fat">-3.8%</span>
+                            </div>
+                            <div class="flex justify-between items-center border-b border-outline-variant pb-4">
+                                <span class="font-label-caps text-label-caps text-on-surface-variant">Consistencia</span>
+                                <span class="font-headline-md text-xl text-primary font-bold" id="metric-compliance">98.4%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Data Simulation Controls -->
+                    <div class="border-t border-outline-variant pt-6 flex flex-col gap-4">
+                        <div class="flex justify-between items-center">
+                            <span class="font-label-caps text-[10px] text-on-surface-variant">BIOMETRÍA INTRA-ENTRENO</span>
+                            <button onclick="toggleSimulation()" id="btn-simulation" class="flex items-center gap-2 border border-outline-variant px-3 py-1.5 font-label-caps text-[10px] hover:border-primary hover:text-primary transition-colors">
+                                <span class="material-symbols-outlined text-[14px]" id="sim-icon">pause</span>
+                                <span id="txt-simulation">PAUSAR SIM</span>
+                            </button>
+                        </div>
+                        <p class="font-body-md text-[13px] text-on-surface-variant leading-relaxed">
+                            Registro de pulso simulado intra-sesión del atleta basado en su carga metabólica.
+                        </p>
+                        <div class="flex items-end justify-between gap-1 h-12 w-full pt-2" id="realtime-bar-chart">
+                            <!-- Realtime bar chart generated by JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Panel: Gorgeous SVG Graphic Area -->
+                <div class="lg:col-span-8 bg-surface border border-outline-variant p-6 sm:p-8 flex flex-col justify-between gap-6 relative min-h-[400px]">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-outline-variant pb-6">
+                        <div class="flex items-center gap-6">
+                            <button class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-2 cursor-pointer focus:outline-none" id="tab-volume" onclick="switchMetric('volume')">VOLUMEN TOTAL (TONELADAS)</button>
+                            <button class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary pb-2 cursor-pointer transition-colors focus:outline-none" id="tab-hr" onclick="switchMetric('hr')">PULSO (BPM)</button>
+                        </div>
+                        <div class="text-[10px] font-label-caps text-on-surface-variant uppercase tracking-wider">SOBRECARGA PROGRESIVA</div>
+                    </div>
+
+                    <!-- SVG Chart Area wrapper -->
+                    <div class="flex-grow flex items-center justify-center min-h-[300px] w-full relative" id="chart-wrapper">
+                        <!-- SVG line and bar chart that animates. Premium dark aesthetic -->
+                        <svg class="w-full h-[320px] transition-all duration-500" viewBox="0 0 600 300" id="svg-chart" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Grid lines -->
+                            <line x1="50" y1="50" x2="550" y2="50" stroke="#222" stroke-dasharray="3" stroke-width="1"/>
+                            <line x1="50" y1="125" x2="550" y2="125" stroke="#222" stroke-dasharray="3" stroke-width="1"/>
+                            <line x1="50" y1="200" x2="550" y2="200" stroke="#222" stroke-dasharray="3" stroke-width="1"/>
+                            <line x1="50" y1="250" x2="550" y2="250" stroke="#444" stroke-width="1"/>
+                            
+                            <!-- Y Axis Labels -->
+                            <text x="38" y="54" fill="#8e9192" font-size="8" font-family="JetBrains Mono" text-anchor="end" id="y-lbl-high">20.0t</text>
+                            <text x="38" y="129" fill="#8e9192" font-size="8" font-family="JetBrains Mono" text-anchor="end" id="y-lbl-mid">12.5t</text>
+                            <text x="38" y="204" fill="#8e9192" font-size="8" font-family="JetBrains Mono" text-anchor="end" id="y-lbl-low">5.0t</text>
+                            <text x="38" y="254" fill="#8e9192" font-size="8" font-family="JetBrains Mono" text-anchor="end">0.0t</text>
+
+                            <!-- Gradient definitions -->
+                            <defs>
+                                <linearGradient id="chart-gradient" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25"/>
+                                    <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0"/>
+                                </linearGradient>
+                            </defs>
+
+                            <!-- Graph Path (Dynamic via JS) -->
+                            <path id="chart-area-path" d="" fill="url(#chart-gradient)" class="transition-all duration-700 ease-in-out"></path>
+                            <path id="chart-line-path" d="" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-all duration-700 ease-in-out"></path>
+                            
+                            <!-- Data Dots Group -->
+                            <g id="chart-dots"></g>
+                            
+                            <!-- Tooltip Group -->
+                            <g id="chart-tooltip" class="opacity-0 pointer-events-none transition-all duration-200">
+                                <rect x="0" y="0" width="80" height="40" fill="#181818" stroke="#ffffff" stroke-width="1" rx="0" id="tooltip-bg"></rect>
+                                <text x="40" y="16" fill="#ffffff" font-size="9" font-family="JetBrains Mono" text-anchor="middle" font-weight="bold" id="tooltip-val"></text>
+                                <text x="40" y="28" fill="#8e9192" font-size="7" font-family="JetBrains Mono" text-anchor="middle" id="tooltip-lbl"></text>
+                            </g>
+
+                            <!-- X Axis Labels (Weeks 1 to 12) -->
+                            <g id="chart-x-labels"></g>
+                        </svg>
+                    </div>
+
+                    <!-- Legend -->
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center text-[10px] font-label-caps text-on-surface-variant border-t border-outline-variant pt-4 gap-2">
+                        <div class="flex gap-6">
+                            <span class="flex items-center gap-2"><span class="w-3 h-0.5 bg-primary inline-block"></span>VALOR REGISTRADO</span>
+                            <span class="flex items-center gap-2"><span class="w-3 h-0.5 bg-neutral-600 inline-block"></span>SOBRECARGA TEÓRICA</span>
+                        </div>
+                        <div class="tracking-wider text-[9px]">PASA EL CURSOR POR LOS PUNTOS PARA MÁS DETALLES</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="py-section-gap px-6 md:px-margin-desktop bg-background border-t border-outline-variant overflow-hidden reveal-element">
+        <div class="max-w-container-max mx-auto">
+            <div class="flex flex-col gap-4 mb-24 text-left">
+                <span class="font-label-caps text-label-caps text-primary block">COMUNIDAD DE ÉLITE</span>
+                <h2 class="font-headline-lg text-3xl sm:text-5xl uppercase font-bold tracking-tight">Los Disciplinados</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-start">
+                <div class="relative">
+                    <span class="text-[160px] leading-none text-outline absolute -top-24 -left-12 opacity-10 font-headline-lg select-none">"</span>
+                    <blockquote class="font-headline-md text-xl sm:text-2xl italic mb-12 relative z-10 leading-relaxed text-on-surface">
+                        "La metodología que emplea Facundo es clínica. No hay rellenos ni egos, solo progresión estructurada. He logrado más en 12 semanas que en 3 años entrenando por mi cuenta."
+                    </blockquote>
+                    <div class="flex items-center gap-6">
+                        <div class="w-16 h-16 border border-outline-variant overflow-hidden">
+                            <img class="w-full h-full object-cover grayscale" alt="Retrato de Ignacio Ramirez" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAdTN427LXwUx3X1gbIwY4bwo3MIKxE_AXy4J8zOjqD0s8a9LY_lyBYg7YLuzSFsNIRlZM5mT780hF4uzkliWz1L6Q5YpbppAaQMx-QfZutfrUixhyuadMl2vhJcs6wnncO7ek_LNuzH-MQnT6hzGsL2Ji-qPbVgXKFlUf1g8Jb_yS4Y7zkOLTBOfGttD_JOGZBQ1dPkpWV4kd-sTTvFsdyBzyUZWl0jyinQWv_uZmcFWFbM0YYCtugOvlJocxGDQtymFPbI3391o">
+                        </div>
+                        <div>
+                            <div class="font-headline-md text-lg uppercase font-bold text-primary">Ignacio Ramirez</div>
+                            <div class="font-label-caps text-[10px] text-on-surface-variant tracking-widest uppercase">CEO, QUANTUM TECH</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative md:mt-24 lg:mt-48">
+                    <span class="text-[160px] leading-none text-outline absolute -top-24 -left-12 opacity-10 font-headline-lg select-none">"</span>
+                    <blockquote class="font-headline-md text-xl sm:text-2xl italic mb-12 relative z-10 leading-relaxed text-on-surface">
+                        "Fuerza Estructural redefinió por completo mi comprensión de la arquitectura muscular. La precisión de los protocolos es inigualable. Mi físico nunca se ha visto tan funcional."
+                    </blockquote>
+                    <div class="flex items-center gap-6">
+                        <div class="w-16 h-16 border border-outline-variant overflow-hidden">
+                            <img class="w-full h-full object-cover grayscale" alt="Retrato de Sarah Jenkins" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyjBGr1akyoxRt0j0pcBg69jpjklMM4aE3yk6S3KQmoUEuFCWYknLKDjPgM-QZ6MSPh0Z6ROHS8CcaNqJHJqr2rhGlacfQFOMsL3PUAyBnipcoJPL8olTmuwecPY7SDfMHoijBInagjqxSJxabqJQt7EhEKKkGNqf-qgktPEFj9RkWYmU-XHyUb_Z41D7_oMsSm6u164OJijUsh-aR3fz57mpW-4wbxPiLHzzbcCDZX1MLMrycPvYNcEtLMRpfTThgkjoxx1cEy3E">
+                        </div>
+                        <div>
+                            <div class="font-headline-md text-lg uppercase font-bold text-primary">Agustina Vaisman</div>
+                            <div class="font-label-caps text-[10px] text-on-surface-variant tracking-widest uppercase">TRIATLETA PRO</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact Section -->
+    <section id="contacto" class="py-section-gap px-6 md:px-margin-desktop bg-surface border-t border-outline-variant reveal-element">
+        <div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24">
+            <div>
+                <h2 class="font-display-xl text-4xl sm:text-6xl lg:text-7xl leading-tight uppercase mb-12 font-black tracking-tighter">¿Listo para<br>evolucionar?</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-md">
+                    Las solicitudes se evalúan estrictamente según el nivel de compromiso. Si estás listo para aplicar la disciplina necesaria para el rendimiento élite, estamos listos para comenzar.
+                </p>
+                <div class="flex flex-col gap-6 font-label-caps text-label-caps text-[12px] tracking-wider">
+                    <div class="flex items-center gap-4 group cursor-pointer" onclick="copyContactText('DIRECTO@FACUNDOSACIDO.COM')">
+                        <span class="material-symbols-outlined text-primary group-hover:opacity-80 transition-opacity">mail</span>
+                        <span class="text-on-surface-variant group-hover:text-primary transition-colors">DIRECTO@FACUNDOSACIDO.COM</span>
+                    </div>
+                    <div class="flex items-center gap-4 group cursor-default">
+                        <span class="material-symbols-outlined text-primary">location_on</span>
+                        <span class="text-on-surface-variant">HQ: BUENOS AIRES / LONDRES</span>
+                    </div>
+                </div>
+                <div class="mt-24 flex gap-8">
+                    <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">INSTAGRAM</a>
+                    <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">LINKEDIN</a>
+                    <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">YOUTUBE</a>
+                </div>
+            </div>
+            
+            <!-- Dynamic interactive Form -->
+            <form class="flex flex-col gap-10" id="coaching-form" onsubmit="handleFormSubmit(event)">
+                <div class="flex flex-col gap-2">
+                    <label class="font-label-caps text-label-caps text-[10px] text-on-surface-variant tracking-widest">NOMBRE COMPLETO</label>
+                    <input required id="form-name" class="bg-black border-0 border-b border-outline-variant p-4 text-primary focus:ring-0 focus:border-primary placeholder:text-outline-variant font-label-caps text-[11px] uppercase tracking-wider" placeholder="INGRESA TU NOMBRE" type="text">
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label class="font-label-caps text-label-caps text-[10px] text-on-surface-variant tracking-widest">CORREO ELECTRÓNICO</label>
+                    <input required id="form-email" class="bg-black border-0 border-b border-outline-variant p-4 text-primary focus:ring-0 focus:border-primary placeholder:text-outline-variant font-label-caps text-[11px] uppercase tracking-wider" placeholder="TU@EMAIL.COM" type="email">
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label class="font-label-caps text-label-caps text-[10px] text-on-surface-variant tracking-widest">OBJETIVO</label>
+                    <select id="form-objective" class="bg-black border-0 border-b border-outline-variant p-4 text-primary focus:ring-0 focus:border-primary appearance-none font-label-caps text-[11px] tracking-wider">
+                        <option>RENDIMIENTO ÉLITE</option>
+                        <option>FUERZA ESTRUCTURAL</option>
+                        <option>COACHING 1-A-1</option>
+                    </select>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label class="font-label-caps text-label-caps text-[10px] text-on-surface-variant tracking-widest">CONDICIÓN ACTUAL (DESCRIBE BREVEMENTE)</label>
+                    <textarea required id="form-condition" class="bg-black border-0 border-b border-outline-variant p-4 text-primary focus:ring-0 focus:border-primary placeholder:text-outline-variant font-label-caps text-[11px] resize-none uppercase tracking-wider" placeholder="DESCRIBE TU ESTADO ACTUAL DE ENTRENAMIENTO" rows="4"></textarea>
+                </div>
+                <button class="bg-primary text-background font-label-caps text-label-caps py-6 hover:bg-neutral-200 transition-all mt-6 active:scale-95 duration-150 font-bold select-none" type="submit">
+                    ENVIAR SOLICITUD
+                </button>
+            </form>
+        </div>
+        <div class="max-w-container-max mx-auto mt-32 pt-16 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-8 text-[10px] font-label-caps text-on-surface-variant tracking-[0.3em] select-none">
+            <div class="">© 2024 FACUNDO SACIDO. TODOS LOS DERECHOS RESERVADOS.</div>
+            <div class="flex gap-12">
+                <a class="hover:text-primary transition-colors" href="#">POLÍTICA DE PRIVACIDAD</a>
+                <a class="hover:text-primary transition-colors" href="#">TÉRMINOS DE SERVICIO</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- BottomNavBar (Mobile only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-center items-center h-14 bg-primary text-background border-t border-outline-variant">
+    <a class="flex flex-col items-center justify-center w-full h-full text-background/60 hover:text-background active:opacity-90 transition-colors" href="#progreso">
+        <span class="material-symbols-outlined">monitoring</span>
+    </a>
+    <a class="flex flex-col items-center justify-center w-full h-full bg-primary text-background hover:text-background/90 active:opacity-90 transition-colors" href="#contacto">
+        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bolt</span>
+    </a>
+</nav>
+
+<!-- JavaScript Application Logic -->
+<script>
+    // ----------------------------------------------------
+    // Drawer Sidebar Logic
+    // ----------------------------------------------------
+    function toggleDrawer() {
+        const drawer = document.getElementById('drawer');
+        const overlay = document.getElementById('drawer-overlay');
+        
+        if (drawer.classList.contains('-translate-x-full')) {
+            drawer.classList.remove('-translate-x-full');
+            overlay.classList.remove('opacity-0', 'pointer-events-none');
+            overlay.classList.add('opacity-100');
+        } else {
+            drawer.classList.add('-translate-x-full');
+            overlay.classList.remove('opacity-100');
+            overlay.classList.add('opacity-0', 'pointer-events-none');
+        }
+    }
+
+    // ----------------------------------------------------
+    // Interactive SVG Charts & Athletes Dashboard Data
+    // ----------------------------------------------------
+    const athleteData = {
+        marcus: {
+            title: "MARCUS C. / 12 SEMANAS",
+            muscle: "+4.2 kg",
+            fat: "-3.8%",
+            compliance: "98.4%",
+            volume: [12.4, 13.1, 12.9, 14.2, 15.0, 14.8, 16.2, 17.0, 16.5, 18.1, 19.0, 19.5],
+            hr: [138, 142, 140, 145, 148, 144, 150, 152, 149, 155, 158, 160],
+            labels: ["Sem 1", "Sem 2", "Sem 3", "Sem 4", "Sem 5", "Sem 6", "Sem 7", "Sem 8", "Sem 9", "Sem 10", "Sem 11", "Sem 12"]
+        },
+        sarah: {
+            title: "SARAH J. / 12 SEMANAS",
+            muscle: "+1.8 kg",
+            fat: "-6.2%",
+            compliance: "99.1%",
+            volume: [8.2, 8.5, 8.9, 9.2, 9.0, 9.8, 10.2, 10.5, 10.1, 11.2, 11.8, 12.0],
+            hr: [142, 145, 148, 150, 146, 152, 155, 158, 154, 162, 165, 168],
+            labels: ["Sem 1", "Sem 2", "Sem 3", "Sem 4", "Sem 5", "Sem 6", "Sem 7", "Sem 8", "Sem 9", "Sem 10", "Sem 11", "Sem 12"]
+        }
+    };
+
+    let activeAthlete = 'marcus';
+    let activeMetric = 'volume'; // 'volume' or 'hr'
+
+    function switchAthlete(athleteKey) {
+        if (activeAthlete === athleteKey) return;
+        activeAthlete = athleteKey;
+
+        // Visual updates to buttons
+        const btnMarcus = document.getElementById('btn-athlete-marcus');
+        const btnSarah = document.getElementById('btn-athlete-sarah');
+
+        if (athleteKey === 'marcus') {
+            btnMarcus.className = "px-5 py-2.5 bg-primary text-background font-bold transition-all";
+            btnSarah.className = "px-5 py-2.5 text-on-surface-variant hover:text-primary transition-all";
+        } else {
+            btnSarah.className = "px-5 py-2.5 bg-primary text-background font-bold transition-all";
+            btnMarcus.className = "px-5 py-2.5 text-on-surface-variant hover:text-primary transition-all";
+        }
+
+        // Render card statistics
+        const data = athleteData[athleteKey];
+        document.getElementById('athlete-title').innerText = data.title;
+        document.getElementById('metric-muscle').innerText = data.muscle;
+        document.getElementById('metric-fat').innerText = data.fat;
+        document.getElementById('metric-compliance').innerText = data.compliance;
+
+        // Re-render chart
+        renderChart();
+        showToast("Caso de estudio de " + athleteKey.toUpperCase() + " cargado exitosamente.", "info");
+    }
+
+    function switchMetric(metricKey) {
+        if (activeMetric === metricKey) return;
+        activeMetric = metricKey;
+
+        const tabVol = document.getElementById('tab-volume');
+        const tabHR = document.getElementById('tab-hr');
+
+        if (metricKey === 'volume') {
+            tabVol.className = "font-label-caps text-label-caps text-primary border-b-2 border-primary pb-2 cursor-pointer focus:outline-none";
+            tabHR.className = "font-label-caps text-label-caps text-on-surface-variant hover:text-primary pb-2 cursor-pointer transition-colors focus:outline-none";
+            
+            document.getElementById('y-lbl-high').innerText = "20.0t";
+            document.getElementById('y-lbl-mid').innerText = "12.5t";
+            document.getElementById('y-lbl-low').innerText = "5.0t";
+        } else {
+            tabHR.className = "font-label-caps text-label-caps text-primary border-b-2 border-primary pb-2 cursor-pointer focus:outline-none";
+            tabVol.className = "font-label-caps text-label-caps text-on-surface-variant hover:text-primary pb-2 cursor-pointer transition-colors focus:outline-none";
+            
+            document.getElementById('y-lbl-high').innerText = "180";
+            document.getElementById('y-lbl-mid').innerText = "150";
+            document.getElementById('y-lbl-low').innerText = "120";
+        }
+
+        renderChart();
+    }
+
+    function renderChart() {
+        const svg = document.getElementById('svg-chart');
+        const linePath = document.getElementById('chart-line-path');
+        const areaPath = document.getElementById('chart-area-path');
+        const dotsGroup = document.getElementById('chart-dots');
+        const labelsGroup = document.getElementById('chart-x-labels');
+        const tooltip = document.getElementById('chart-tooltip');
+
+        const currentData = athleteData[activeAthlete];
+        const rawValues = currentData[activeMetric];
+        const labels = currentData.labels;
+
+        // Chart SVG parameters
+        const xStart = 50;
+        const xEnd = 550;
+        const yStart = 250; // Bottom (0 value)
+        const yMax = 50;    // Top (Max value)
+        const chartWidth = xEnd - xStart;
+        const chartHeight = yStart - yMax;
+
+        // Determine dynamic scale bounds based on metric
+        let maxVal = 20.0;
+        let minVal = 0.0;
+        if (activeMetric === 'hr') {
+            maxVal = 180;
+            minVal = 100; // Heart rate baseline
+        }
+
+        // Generate coordinate mappings
+        const points = [];
+        const stepX = chartWidth / (rawValues.length - 1);
+
+        for (let i = 0; i < rawValues.length; i++) {
+            const val = rawValues[i];
+            const x = xStart + i * stepX;
+            
+            // Normalize scale mapping
+            let y = yStart;
+            if (activeMetric === 'hr') {
+                const ratio = (val - minVal) / (maxVal - minVal);
+                y = yStart - (ratio * chartHeight);
+            } else {
+                const ratio = val / maxVal;
+                y = yStart - (ratio * chartHeight);
+            }
+            points.push({ x, y, val, label: labels[i] });
+        }
+
+        // Draw Line Path
+        let lineD = `M ${points[0].x} ${points[0].y}`;
+        for (let i = 1; i < points.length; i++) {
+            lineD += ` L ${points[i].x} ${points[i].y}`;
+        }
+        linePath.setAttribute('d', lineD);
+
+        // Draw Area Path below the line for modern glass look
+        const areaD = `${lineD} L ${points[points.length - 1].x} ${yStart} L ${points[0].x} ${yStart} Z`;
+        areaPath.setAttribute('d', areaD);
+
+        // Render Data dots
+        dotsGroup.innerHTML = '';
+        points.forEach((pt, index) => {
+            const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+            circle.setAttribute('cx', pt.x);
+            circle.setAttribute('cy', pt.y);
+            circle.setAttribute('r', 5);
+            circle.setAttribute('fill', '#131313');
+            circle.setAttribute('stroke', '#ffffff');
+            circle.setAttribute('stroke-width', 2);
+            circle.setAttribute('class', 'cursor-pointer hover:r-7 transition-all duration-150');
+
+            // Interactive Event Handlers (Tooltips)
+            circle.addEventListener('mouseenter', (e) => {
+                circle.setAttribute('r', 7);
+                circle.setAttribute('fill', '#ffffff');
+                circle.setAttribute('stroke', '#000000');
+
+                // Position tooltip
+                const tooltipBg = document.getElementById('tooltip-bg');
+                const tooltipVal = document.getElementById('tooltip-val');
+                const tooltipLbl = document.getElementById('tooltip-lbl');
+
+                tooltipVal.textContent = pt.val + (activeMetric === 'volume' ? ' Tons' : ' BPM');
+                tooltipLbl.textContent = pt.label;
+
+                const tooltipWidth = 80;
+                const tooltipHeight = 40;
+                let tx = pt.x - tooltipWidth / 2;
+                let ty = pt.y - tooltipHeight - 12;
+
+                // Border bounds validation
+                if (tx < 10) tx = 10;
+                if (tx + tooltipWidth > 590) tx = 590 - tooltipWidth;
+
+                tooltip.setAttribute('transform', `translate(${tx}, ${ty})`);
+                tooltip.classList.remove('opacity-0');
+            });
+
+            circle.addEventListener('mouseleave', () => {
+                circle.setAttribute('r', 5);
+                circle.setAttribute('fill', '#131313');
+                circle.setAttribute('stroke', '#ffffff');
+                tooltip.classList.add('opacity-0');
+            });
+
+            dotsGroup.appendChild(circle);
+        });
+
+        // Render X axis labels once
+        labelsGroup.innerHTML = '';
+        points.forEach((pt) => {
+            const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+            text.setAttribute('x', pt.x);
+            text.setAttribute('y', yStart + 20);
+            text.setAttribute('fill', '#8e9192');
+            text.setAttribute('font-size', '8px');
+            text.setAttribute('font-family', 'JetBrains Mono');
+            text.setAttribute('text-anchor', 'middle');
+            text.textContent = pt.label.replace("Sem ", "S");
+            labelsGroup.appendChild(text);
+        });
+    }
+
+    // ----------------------------------------------------
+    // Live Workout Biometrics Simulation (Bottom Left Bar Chart)
+    // ----------------------------------------------------
+    let simInterval = null;
+    let simRunning = true;
+    const realtimeBarsCount = 18;
+    const rChart = document.getElementById('realtime-bar-chart');
+
+    // Create Bars in DOM
+    for (let i = 0; i < realtimeBarsCount; i++) {
+        const bar = document.createElement('div');
+        bar.className = 'w-full bg-neutral-600 hover:bg-white transition-all duration-300';
+        bar.style.height = Math.floor(Math.random() * 80 + 20) + '%';
+        rChart.appendChild(bar);
+    }
+
+    function runSimulation() {
+        if (!simRunning) return;
+        const bars = rChart.children;
+        // Shift heights left and insert new randomized value at end
+        for (let i = 0; i < bars.length - 1; i++) {
+            bars[i].style.height = bars[i+1].style.height;
+        }
+        // High pulse vs resting simulation fluctuation
+        const targetHeight = Math.floor(Math.random() * 65 + (activeAthlete === 'sarah' ? 35 : 25));
+        bars[bars.length - 1].style.height = targetHeight + '%';
+    }
+
+    function toggleSimulation() {
+        simRunning = !simRunning;
+        const btnSim = document.getElementById('btn-simulation');
+        const txtSim = document.getElementById('txt-simulation');
+        const simIcon = document.getElementById('sim-icon');
+
+        if (simRunning) {
+            txtSim.textContent = "PAUSAR SIM";
+            simIcon.textContent = "pause";
+            btnSim.classList.remove('border-red-500', 'text-red-500');
+            showToast("Simulación de biometría en vivo reanudada.", "info");
+        } else {
+            txtSim.textContent = "ACTIVAR SIM";
+            simIcon.textContent = "play_arrow";
+            btnSim.classList.add('border-red-500', 'text-red-500');
+            showToast("Simulación biométrica en pausa.", "warning");
+        }
+    }
+
+    simInterval = setInterval(runSimulation, 450);
+
+    // ----------------------------------------------------
+    // Toast Notification System
+    // ----------------------------------------------------
+    function showToast(message, type = 'success') {
+        const container = document.getElementById('toast-container');
+        const toast = document.createElement('div');
+        
+        // Setup icons based on toast severity
+        let icon = 'check_circle';
+        let iconColor = 'text-white';
+        let title = 'SISTEMA';
+
+        if (type === 'success') {
+            icon = 'done_all';
+            iconColor = 'text-green-400';
+            title = 'ÉXITO';
+        } else if (type === 'error') {
+            icon = 'gpp_bad';
+            iconColor = 'text-red-500';
+            title = 'ALERTA DE ERROR';
+        } else if (type === 'warning') {
+            icon = 'report_problem';
+            iconColor = 'text-yellow-400';
+            title = 'ATENCIÓN';
+        } else if (type === 'info') {
+            icon = 'info';
+            iconColor = 'text-blue-400';
+            title = 'SISTEMA INFORMATIVO';
+        }
+
+        toast.className = "glass-toast p-4 flex gap-4 items-start translate-x-12 opacity-0 transition-all duration-300 pointer-events-auto border-l-4 border-l-white";
+        
+        if (type === 'error') toast.classList.add('border-l-red-500');
+        if (type === 'warning') toast.classList.add('border-l-yellow-400');
+        if (type === 'success') toast.classList.add('border-l-green-400');
+
+        toast.innerHTML = `
+            <span class="material-symbols-outlined ${iconColor} shrink-0 mt-0.5">${icon}</span>
+            <div class="flex-grow flex flex-col gap-0.5">
+                <span class="font-label-caps text-[10px] tracking-wider text-neutral-400 font-bold">${title}</span>
+                <p class="font-body-md text-[13px] text-white leading-snug">${message}</p>
+            </div>
+            <span class="material-symbols-outlined text-neutral-500 hover:text-white cursor-pointer text-sm shrink-0" onclick="this.parentElement.remove()">close</span>
+        `;
+
+        container.appendChild(toast);
+
+        // Slide-in Animation trigger
+        setTimeout(() => {
+            toast.classList.remove('translate-x-12', 'opacity-0');
+        }, 10);
+
+        // Dismiss Toast automatically after 5 seconds
+        setTimeout(() => {
+            toast.classList.add('opacity-0', 'translate-x-12');
+            setTimeout(() => toast.remove(), 300);
+        }, 5000);
+    }
+
+    // ----------------------------------------------------
+    // Form Submission & Contact Interaction
+    // ----------------------------------------------------
+    function handleFormSubmit(event) {
+        event.preventDefault();
+
+        const name = document.getElementById('form-name').value.trim();
+        const email = document.getElementById('form-email').value.trim();
+        const objective = document.getElementById('form-objective').value;
+        const condition = document.getElementById('form-condition').value.trim();
+
+        if (!name || !email || !condition) {
+            showToast("Por favor complete todos los campos obligatorios del formulario.", "error");
+            return;
+        }
+
+        // High visual interaction feedback
+        const submitBtn = event.target.querySelector('button[type="submit"]');
+        const prevText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = "ENVIANDO DATOS ENCRIPTADOS...";
+
+        setTimeout(() => {
+            showToast("¡Solicitud de coaching recibida! Facundo evaluará tu perfil dentro de las próximas 24 horas.", "success");
+            event.target.reset();
+            submitBtn.disabled = false;
+            submitBtn.textContent = prevText;
+        }, 1200);
+    }
+
+    function copyContactText(text) {
+        navigator.clipboard.writeText(text).then(() => {
+            showToast("Correo electrónico copiado al portapapeles.", "success");
+        }).catch(err => {
+            showToast("Error al copiar texto.", "error");
+        });
+    }
+
+    // ----------------------------------------------------
+    // Intersection Observer (Scroll Reveal Animations)
+    // ----------------------------------------------------
+    document.addEventListener("DOMContentLoaded", () => {
+        // Initial SVG rendering
+        renderChart();
+
+        // Reveal Elements Setup
+        const revealElements = document.querySelectorAll('.reveal-element');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        });
+
+        revealElements.forEach(el => {
+            el.classList.add('reveal-element'); // Injects base class dynamically
+            observer.observe(el);
+        });
+
+        // Trigger micro-scale interactions
+        document.querySelectorAll('button, a, input, select, textarea').forEach(el => {
+            el.addEventListener('mousedown', () => {
+                el.style.transform = 'scale(0.97)';
+            });
+            el.addEventListener('mouseup', () => {
+                el.style.transform = '';
+            });
+            el.addEventListener('mouseleave', () => {
+                el.style.transform = '';
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
